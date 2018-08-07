@@ -11,4 +11,6 @@ LOCAL_C_INCLUDES := \
     bootable/recovery \
     bootable/recovery/minui/include
 
+LOCAL_HEADER_LIBRARIES := libbatteryservice_headers
+
 include $(BUILD_STATIC_LIBRARY)
