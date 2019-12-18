@@ -1,0 +1,22 @@
+
+
+cc_library_static {
+    name: "libhealthd.msm",
+    srcs: [
+        "healthd_board_msm.cpp",
+        "healthd_msm_alarm.cpp",
+    ],
+
+    cflags: ["-Werror"],
+    include_dirs: [
+        "bootable/recovery",
+        "bootable/recovery/minui/include",
+    ],
+
+    header_libs: [
+        "libbatteryservice_headers",
+        "libbase_headers",
+        "libhealthd_headers",
+    ],
+
+}

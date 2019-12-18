@@ -36,7 +36,7 @@
 #include <batteryservice/BatteryService.h>
 #include <cutils/android_reboot.h>
 #include <cutils/properties.h>
-#include <healthd.h>
+#include <healthd/healthd.h>
 #include "minui/minui.h"
 #include "healthd_msm.h"
 #define ARRAY_SIZE(x)           (sizeof(x)/sizeof(x[0]))
