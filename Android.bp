@@ -1,5 +1,3 @@
-
-
 cc_library_static {
     name: "libhealthd.msm",
     srcs: [
@@ -19,4 +17,39 @@ cc_library_static {
         "libhealthd_headers",
     ],
 
+}
+
+cc_library_shared {
+    name: "android.hardware.health@2.1-impl-qti",
+    stem: "android.hardware.health@2.0-impl-2.1-qti",
+    vendor: true,
+    recovery_available: true,
+
+    relative_install_path: "hw",
+
+    srcs: [
+        "healthimpl.cpp",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    static_libs: [
+        "android.hardware.health@1.0-convert",
+        "libbatterymonitor",
+        "libhealthloop",
+        "libhealth2impl",
+    ],
+
+    shared_libs: [
+        "libbase",
+        "libcutils",
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "android.hardware.health@2.0",
+        "android.hardware.health@2.1",
+    ],
 }
